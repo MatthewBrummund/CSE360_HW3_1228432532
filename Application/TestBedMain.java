@@ -1,26 +1,31 @@
 package application;
 
 
-/*******
+/**
  * <p> Title: TestBedMain Class. </p>
  * 
- * <p> Description: A Java implementation for semi-automated tests for the Answer and UserHomePage classes </p>
+ * <p> Description: A Java implementation for semi-automated tests for the Answer class </p>
  * 
  * <p> Copyright: Matthew Thomas Brummund © 2025 </p>
  * 
  * @author Matthew Thomas Brummund
  * 
- * @version 1.00	2025-03-26 A set of semi-automated test cases for the Answer and UserHomePage classes
+ * @version 1.00	2025-03-26 A set of semi-automated test cases for the Answer and class
  * 
  */
 public class TestBedMain {
 	
-	static int numPassed = 0;	// Counter of the number of passed tests
-	static int numFailed = 0;	// Counter of the number of failed tests
+	/** Counter of the number of passed tests */
+	static int numPassed = 0;
+	
+	/** Counter of the number of failed tests */
+	static int numFailed = 0;
 
-	/*
+	/**
 	 * This mainline displays a header to the console, performs a sequence of
 	 * test cases, and then displays a footer with a summary of the results
+	 * 
+	 * @param args Command line arguments (not used)
 	 */
 	public static void main(String[] args) {
 		/************** Test cases semi-automation report header **************/
@@ -59,10 +64,14 @@ public class TestBedMain {
 	
 	
 	
-	/*
+	/**
 	 * This method implements a testcase for the getText Method in the Answer class.
 	 * The purpose of the method is to set the answer text if needed, and here this is implemented.
 	 * The test works by displaying the header, doing the test, and then interpreting and displaying the results.
+	 * 
+	 * @param testCase The test case number for reporting purposes
+	 * @param inputText The text to set for the answer
+	 * @param expectedPass Whether the test is expected to pass or fail
 	 */
 	private static void performTestCaseSetText(int testCase, String inputText, boolean expectedPass) {
 		/************** Display an individual test case header **************/
@@ -116,9 +125,13 @@ public class TestBedMain {
 		}
 	}
 	
-	/*
+	/**
 	 * This method sets up everything needed to test the upvotes method, and then tests it.
 	 * It does this through displaying the header, testing, interpreting and displaying the results.
+	 * 
+	 * @param testCase The test case number for reporting purposes
+	 * @param numUpvotes The number of times to upvote the answer
+	 * @param expectedPass Whether the test is expected to pass or fail
 	 */
 	private static void performTestCaseUpvote(int testCase, int numUpvotes, boolean expectedPass) {
 		/************** Display an individual test case header **************/
@@ -175,9 +188,13 @@ public class TestBedMain {
 		}
 	}
 	
-	/*
+	/**
 	 * This method sets up everything needed to test the downvote method, and then tests it.
 	 * It does this through displaying the header, testing, interpreting and displaying the results.
+	 * 
+	 * @param testCase The test case number for reporting purposes
+	 * @param numdownvotes The number of times to downvote the answer
+	 * @param expectedPass Whether the test is expected to pass or fail
 	 */
 	private static void performTestCaseDownvote(int testCase, int numdownvotes, boolean expectedPass) {
 		/************** Display an individual test case header **************/
@@ -236,10 +253,14 @@ public class TestBedMain {
 	
 	
 	
-	/*
+	/**
 	 * This method sets up an answer and sets it as correct or not based on the input.
 	 * Then it will check if the correct value has been assigned to the answer.
 	 * Lastly it will do all of this through displaying a header, interpreting the results, and displaying them.
+	 * 
+	 * @param testCase The test case number for reporting purposes
+	 * @param correct Whether the answer should be marked as correct
+	 * @param expectedPass Whether the test is expected to pass or fail
 	 */
 	private static void performTestCaseMarkAsCorrect(int testCase, Boolean correct, boolean expectedPass) {
 		/************** Display an individual test case header **************/
@@ -293,10 +314,14 @@ public class TestBedMain {
 		}
 	}
 	
-	/*
+	/**
 	 * This method sets up the value to have as the username, and assigns it to an example answer.
 	 * It will then check if the assigned username was the correct one, and if so
 	 * then it will display the output in the correct way.
+	 *
+	 * @param testCase The test case number for reporting purposes
+	 * @param userName The username to set for the answer
+	 * @param expectedPass Whether the test is expected to pass or fail
 	 */
 	private static void performTestCaseSetAnsweredBy(int testCase, String userName, boolean expectedPass) {
 		/************** Display an individual test case header **************/
@@ -351,5 +376,3 @@ public class TestBedMain {
 		}
 	}
 }
-	
-	
